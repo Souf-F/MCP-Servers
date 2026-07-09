@@ -1,0 +1,109 @@
+{
+  "topics": [
+    {
+      "id": "python-decorators",
+      "title": "Python Decorators",
+      "summary": "Functions that wrap other functions to extend or modify their behavior without changing their source code.",
+      "prerequisites": ["Functions", "Scope", "First-class functions"],
+      "key_concepts": [
+        "Higher-order functions",
+        "Wrapper functions",
+        "The @decorator syntax",
+        "functools.wraps"
+      ],
+      "common_mistakes": [
+        "Forgetting to return the wrapper function",
+        "Forgetting to use functools.wraps, losing the original function's metadata",
+        "Confusing decorators with plain function calls"
+      ],
+      "practice_idea": "Create a decorator that logs the name and execution time of any function it wraps."
+    },
+    {
+      "id": "python-list-comprehensions",
+      "title": "Python List Comprehensions",
+      "summary": "A concise syntax to build lists (and other collections) by transforming or filtering an iterable in a single expression.",
+      "prerequisites": ["For loops", "Lists", "Conditionals"],
+      "key_concepts": [
+        "Expression + for clause + optional if clause",
+        "Nested comprehensions",
+        "Set and dict comprehensions"
+      ],
+      "common_mistakes": [
+        "Writing comprehensions so nested they become unreadable",
+        "Using a comprehension purely for side effects instead of a for loop",
+        "Forgetting that the loop variable leaks into it only in Python 2, causing confusion in Python 3"
+      ],
+      "practice_idea": "Rewrite a for loop that builds a filtered, transformed list as a single list comprehension."
+    },
+    {
+      "id": "javascript-closures",
+      "title": "JavaScript Closures",
+      "summary": "A closure is a function that remembers the variables from the scope it was created in, even after that scope has finished executing.",
+      "prerequisites": ["Functions", "Scope", "Execution context"],
+      "key_concepts": [
+        "Lexical scoping",
+        "Function factories",
+        "Data privacy with closures"
+      ],
+      "common_mistakes": [
+        "Creating closures inside loops without understanding variable capture (classic var vs let issue)",
+        "Assuming closures copy variables instead of referencing them",
+        "Causing memory leaks by holding unnecessary references alive"
+      ],
+      "practice_idea": "Write a counter() function that returns an increment function keeping its own private count."
+    },
+    {
+      "id": "flask-routing",
+      "title": "Flask Routing and Views",
+      "summary": "Flask maps URL patterns to Python functions (views) that generate the HTTP response for that route.",
+      "prerequisites": ["HTTP basics", "Python functions", "Flask installation"],
+      "key_concepts": [
+        "@app.route decorator",
+        "Dynamic URL segments and converters",
+        "HTTP methods (GET, POST, etc.)",
+        "Jinja2 template rendering"
+      ],
+      "common_mistakes": [
+        "Forgetting to specify methods=['POST'] for form submissions",
+        "Not validating dynamic URL parameters",
+        "Mixing business logic directly inside view functions instead of separating concerns"
+      ],
+      "practice_idea": "Build a small Flask app with a dynamic route /topics/<topic_id> that renders a Jinja2 template."
+    },
+    {
+      "id": "mongodb-aggregation",
+      "title": "MongoDB Aggregation Pipeline",
+      "summary": "A framework for processing documents through a sequence of stages (filter, group, sort, reshape) to produce computed results.",
+      "prerequisites": ["MongoDB CRUD basics", "JSON/BSON documents"],
+      "key_concepts": [
+        "$match, $group, $project, $sort stages",
+        "Pipeline stage ordering",
+        "Accumulator operators ($sum, $avg, $count)"
+      ],
+      "common_mistakes": [
+        "Placing $match too late in the pipeline, hurting performance",
+        "Forgetting that stage order changes the result",
+        "Overusing aggregation for tasks a simple query could handle"
+      ],
+      "practice_idea": "Write an aggregation pipeline that groups documents by category and returns the average of a numeric field per group."
+    },
+    {
+      "id": "python-websockets",
+      "title": "Python WebSockets with async/await",
+      "summary": "WebSockets provide a persistent, full-duplex connection between client and server, useful for real-time communication.",
+      "prerequisites": ["HTTP basics", "Python async/await", "Event loops"],
+      "key_concepts": [
+        "Handshake and persistent connection",
+        "async def handlers",
+        "Broadcasting messages to multiple clients",
+        "Handling disconnects gracefully"
+      ],
+      "common_mistakes": [
+        "Blocking the event loop with synchronous code inside an async handler",
+        "Not handling ConnectionClosed exceptions",
+        "Forgetting to await coroutines, causing silent bugs"
+      ],
+      "practice_idea": "Build a minimal chat server using the websockets library that broadcasts any received message to all connected clients."
+    }
+  ]
+}
