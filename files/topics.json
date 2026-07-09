@@ -1,0 +1,16 @@
+{
+  "topics": [
+    {
+      "id": "python-decorators",
+      "title": "Python Decorators",
+      "category": "Python",
+      "level": "intermediate",
+      "summary": "Functions that wrap other functions to extend their behavior without modifying their code.",
+      "prerequisites": ["python-functions", "python-first-class-functions"],
+      "practice_ideas": [
+        "Write a timing decorator that logs how long a function takes to run.",
+        "Write a decorator that caches the result of a function call."
+      ]
+    }
+  ]
+}
